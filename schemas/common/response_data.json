@@ -12,25 +12,6 @@
       "pattern": "^[a-zA-Z]+$",
       "examples": ["zGBdpb", "cWGwcF"]
     },
-    "supplementary_data_mapping": {
-      "type": "object",
-      "description": "An object containing a supplementary data list item identifier and its corresponding list item id.",
-      "properties": {
-        "identifier": {
-          "type": ["string", "integer"],
-          "description": "The supplementary data list item identifier.",
-          "minLength": 1,
-          "minimum": 0
-        },
-        "list_item_id": {
-          "$ref": "response_data.json#/$defs/list_item_id",
-          "description": "The Runner list item id."
-        }
-      },
-      "required": ["identifier", "list_item_id"],
-      "additionalProperties": false,
-      "unevaluatedProperties": false
-    },
     "answer_id": {
       "type": "string",
       "description": "The ID of an answer.",
@@ -235,32 +216,6 @@
         "unevaluatedProperties": false
       }
     },
-    "data_version_0_0_3_answer_codes": {
-      "type": "array",
-      "description": "An array of answer code objects to represent the `answer_id` (optionally the `answer_value`) to user-defined code relationship",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": {
-        "type": "object",
-        "description": "An answer code mapping object.",
-        "properties": {
-          "answer_id": {
-            "$ref": "response_data.json#/$defs/answer_id"
-          },
-          "code": {
-            "type": "string",
-            "pattern": "^[a-zA-Z0-9._-]+$",
-            "description": "The user-defined answer code."
-          },
-          "answer_value": {
-            "$ref": "response_data.json#/$defs/answer_values"
-          }
-        },
-        "additionalProperties": false,
-        "unevaluatedProperties": false,
-        "required": ["answer_id", "code"]
-      }
-    },
     "data_version_0_0_3_answers": {
       "type": "array",
       "description": "An array of answers built up during the questionnaire completion.",
@@ -283,37 +238,7 @@
         "unevaluatedProperties": false,
         "required": ["answer_id", "value"]
       }
-    },
-    "supplementary_data": {
-      "type": "object",
-      "description": "The unedited contents of a supplementary data schema https://github.com/ONSdigital/sds-schema-definitions/tree/main/schemas",
-      "minProperties": 1
     }
-  },
-  "feedback_response_legacy": {
-    "type": "object",
-    "description": "This is used for data_version 0.0.1 or 0.0.3 feedback submissions by the soon to be deprecated feedback format.",
-    "properties": {
-      "feedback_type": {
-        "$ref": "definitions.json#/non_empty_string",
-        "description": "The type of feedback."
-      },
-      "feedback_text": {
-        "$ref": "definitions.json#/non_empty_string",
-        "description": "The feedback text."
-      },
-      "feedback_count": {
-        "type": "string",
-        "description": "The number of times the feedback has been submitted.",
-        "pattern": "^[0-9]+$"
-      },
-      "survey_metadata": {
-        "$ref": "survey_metadata.json#/survey_metadata"
-      }
-    },
-    "additionalProperties": false,
-    "unevaluatedProperties": false,
-    "required": ["feedback_type", "feedback_text", "feedback_count"]
   },
   "feedback_response": {
     "type": "object",
@@ -351,33 +276,15 @@
     "unevaluatedProperties": false,
     "required": ["email_address"]
   },
-  "survey_response_0_0_1": {
-    "type": "object",
-    "description": "This is used for data_version 0.0.1 survey submissions.",
-    "patternProperties": {
-      "^[a-zA-Z0-9._-]+$": {
-        "$ref": "definitions.json#/non_empty_string",
-        "description": "The answer value."
-      }
-    },
-    "additionalProperties": false,
-    "unevaluatedProperties": false
-  },
   "survey_response_0_0_3": {
     "type": "object",
     "description": "This is used for data_version 0.0.3 survey submissions.",
     "properties": {
-      "answer_codes": {
-        "$ref": "response_data.json#/$defs/data_version_0_0_3_answer_codes"
-      },
       "answers": {
         "$ref": "response_data.json#/$defs/data_version_0_0_3_answers"
       },
       "lists": {
         "$ref": "response_data.json#/$defs/data_version_0_0_3_lists"
-      },
-      "supplementary_data": {
-        "$ref": "response_data.json#/$defs/supplementary_data"
       }
     },
     "additionalProperties": false,

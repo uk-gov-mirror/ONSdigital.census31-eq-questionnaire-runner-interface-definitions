@@ -44,8 +44,7 @@ All JWT payloads **SHALL** include the follow claims:
   - `jti` claim **MUST NOT** be the same value as the `tx_id` in the JWT
     Payload (see UUID Definition).
 
-The JWT payload can also contain specific other data (claims) defined in
-the definitions within this website.
+The JWT payload can also contain other claims dependent on whether it is being used for [launching an EQ](launch_payload_v2.md) or [submitting an EQ](submission_payload_v2.md).
 
 ## Signing
 

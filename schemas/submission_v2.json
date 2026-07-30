@@ -31,9 +31,6 @@
     "region_code": {
       "$ref": "common/definitions.json#/region_code"
     },
-    "schema_name": {
-      "$ref": "common/definitions.json#/schema_name"
-    },
     "schema_url": {
       "$ref": "common/definitions.json#/schema_url"
     },
@@ -47,7 +44,7 @@
       "$ref": "common/definitions.json#/submitted_at"
     },
     "survey_metadata": {
-      "$ref": "common/survey_metadata.json#/submission_survey_metadata"
+      "$ref": "common/survey_metadata.json#/survey_metadata"
     },
     "tx_id": {
       "$ref": "common/definitions.json#/tx_id"
@@ -64,34 +61,6 @@
   },
   "additionalProperties": false,
   "unevaluatedProperties": false,
-  "$defs": {
-    "sds_dataset_id_exists": {
-      "properties": {
-        "survey_metadata": {
-          "properties": {
-            "sds_dataset_id": {
-              "$ref": "common/definitions.json#/sds_dataset_id"
-            }
-          },
-          "required": ["sds_dataset_id"]
-        }
-      },
-      "required": ["survey_metadata"]
-    },
-    "data_supplementary_data_exists": {
-      "properties": {
-        "data": {
-          "properties": {
-            "supplementary_data": {
-              "type": "object"
-            }
-          },
-          "required": ["supplementary_data"]
-        }
-      },
-      "required": ["data"]
-    }
-  },
   "allOf": [
     {
       "if": {
@@ -100,10 +69,7 @@
       "then": {
         "properties": {
           "data": {
-            "oneOf": [
-              { "$ref": "common/response_data.json#/feedback_response" },
-              { "$ref": "common/response_data.json#/feedback_response_legacy" }
-            ]
+            "$ref": "common/response_data.json#/feedback_response" 
           }
         }
       },
