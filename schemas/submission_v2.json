@@ -69,7 +69,10 @@
       "then": {
         "properties": {
           "data": {
-            "$ref": "common/response_data.json#/feedback_response" 
+            "oneOf": [
+              { "$ref": "common/response_data.json#/feedback_response" },
+              { "$ref": "common/response_data.json#/feedback_response_legacy" }
+            ]
           }
         }
       },

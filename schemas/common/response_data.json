@@ -240,6 +240,31 @@
       }
     }
   },
+  "feedback_response_legacy": {
+    "type": "object",
+    "description": "This is used for data_version 0.0.1 or 0.0.3 feedback submissions by the soon to be deprecated feedback format.",
+    "properties": {
+      "feedback_type": {
+        "$ref": "definitions.json#/non_empty_string",
+        "description": "The type of feedback."
+      },
+      "feedback_text": {
+        "$ref": "definitions.json#/non_empty_string",
+        "description": "The feedback text."
+      },
+      "feedback_count": {
+        "type": "string",
+        "description": "The number of times the feedback has been submitted.",
+        "pattern": "^[0-9]+$"
+      },
+      "survey_metadata": {
+        "$ref": "survey_metadata.json#/survey_metadata"
+      }
+    },
+    "additionalProperties": false,
+    "unevaluatedProperties": false,
+    "required": ["feedback_type", "feedback_text", "feedback_count"]
+  },
   "feedback_response": {
     "type": "object",
     "description": "This is used for data_version 0.0.1 or 0.0.3 feedback submissions",
