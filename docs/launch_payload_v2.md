@@ -47,7 +47,7 @@ The top-level `survey_metadata` property is for data used within a questionnaire
 | **questionnaire_id** | The questionnaire id for the case                                                                                                                                                                                                                                                                                      |
 | **user_id**          | _(optional)_ The ID assigned by the respondent management system, for example representing a Contact Centre operative                                                                                                                                                                                                  |
 
-See the [survey metadata definition schema](../schemas/common/survey_metadata.json#L53) for more detail.
+See the [survey metadata schema](../schemas/common/survey_metadata.json#L53) for more detail.
 
 ## Example JWT Payload
 
@@ -78,7 +78,7 @@ See the [survey metadata definition schema](../schemas/common/survey_metadata.js
 }
 ```
 
-This example JSON can be found at [launch_jwt_census](../examples/launch/payload_v2/launch_jwt_v2.json).
+This example JSON can be found at [launch_jwt_v2.json](../examples/launch/payload_v2/launch_jwt_v2.json).
 
 [jwt_profile]: jwt_profile.md "JWT Profile Definition"
 [survey_metadata]: #survey-metadata "Survey Metadata"

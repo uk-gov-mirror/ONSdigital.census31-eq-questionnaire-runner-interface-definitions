@@ -4,32 +4,33 @@
   "title": "Survey Metadata Definitions",
   "type": "object",
   "$defs": {
-  "survey_metadata": {
-    "type": "object",
-    "description": "The survey metadata properties for census surveys.",
-    "properties": {
-      "case_type": {
-        "$ref": "definitions.json#/case_type"
+    "survey_metadata": {
+      "type": "object",
+      "description": "The survey metadata properties for census surveys.",
+      "properties": {
+        "case_type": {
+          "$ref": "definitions.json#/case_type"
+        },
+        "display_address": {
+          "$ref": "definitions.json#/display_address"
+        },
+        "ru_ref": {
+          "$ref": "definitions.json#/ru_ref"
+        },
+        "user_id": {
+          "$ref": "definitions.json#/user_id"
+        },
+        "questionnaire_id": {
+          "$ref": "definitions.json#/questionnaire_id"
+        }
       },
-      "display_address": {
-        "$ref": "definitions.json#/display_address"
-      },
-      "ru_ref": {
-        "$ref": "definitions.json#/ru_ref"
-      },
-      "user_id": {
-        "$ref": "definitions.json#/user_id"
-      },
-      "questionnaire_id": {
-        "$ref": "definitions.json#/questionnaire_id"
-      }
-    },
-    "additionalProperties": false,
-    "required": [
-      "ru_ref",
-      "display_address",
-      "case_type",
-      "questionnaire_id"
-    ]
+      "additionalProperties": false,
+      "required": [
+        "ru_ref",
+        "display_address",
+        "case_type",
+        "questionnaire_id"
+      ]
+    }
   }
 }
