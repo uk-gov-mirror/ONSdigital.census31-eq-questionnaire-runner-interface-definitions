@@ -25,11 +25,20 @@
     "launch_language_code": {
       "$ref": "common/definitions.json#/launch_language_code"
     },
+    "period_id": {
+      "$ref": "common/definitions.json#/period_id"
+    },
     "origin": {
       "$ref": "common/definitions.json#/origin"
     },
     "region_code": {
       "$ref": "common/definitions.json#/region_code"
+    },
+    "schema": {
+      "$ref": "common/definitions.json#/schema"
+    },
+    "schema_name": {
+      "$ref": "common/definitions.json#/schema_name"
     },
     "schema_url": {
       "$ref": "common/definitions.json#/schema_url"
@@ -99,13 +108,6 @@
                 "$ref": "common/response_data.json#/survey_response_0_0_3"
               }
             }
-          },
-          "else": {
-            "properties": {
-              "data": {
-                "$ref": "common/response_data.json#/survey_response_0_0_1"
-              }
-            }
           }
         }
       }
@@ -120,22 +122,6 @@
       },
       "then": {
         "required": ["submission_language_code"]
-      }
-    },
-    {
-      "if": {
-        "$ref": "#/$defs/sds_dataset_id_exists"
-      },
-      "then": {
-        "$ref": "#/$defs/data_supplementary_data_exists"
-      }
-    },
-    {
-      "if": {
-        "$ref": "#/$defs/data_supplementary_data_exists"
-      },
-      "then": {
-        "$ref": "#/$defs/sds_dataset_id_exists"
       }
     }
   ],
@@ -159,6 +145,10 @@
     },
     {
       "required": ["schema_url"]
+    },
+    {
+      "required": ["schema"]
     }
+
   ]
 }

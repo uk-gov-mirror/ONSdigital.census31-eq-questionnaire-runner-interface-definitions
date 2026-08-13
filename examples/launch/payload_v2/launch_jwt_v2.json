@@ -16,8 +16,8 @@
   "survey_metadata": {
     "case_type": "HH",
     "display_address": "15 Credibility Street, Bristol, BS7 8ES",
-    "form_type": "H",
-    "ru_ref": "uprn:00001"
+    "ru_ref": "uprn:00001",
+    "questionnaire_id": "1234567890"
   },
   "tx_id": "7e916adc-1f36-4f1e-81f9-57a4ab4ad183",
   "version": "v2"

@@ -9,6 +9,7 @@
   "launch_language_code": "en",
   "submission_language_code": "en",
   "collection_exercise_sid": "77d00da0-9245-40a3-9219-a9f860066167",
+  "period_id": "2027",
   "schema": {
     "survey": "CENSUS",
     "form_type": "H",
@@ -17,7 +18,6 @@
   "case_id": "f48e8790-f591-4086-9f6d-98c8642d96cb",
   "survey_metadata": {
     "user_id": "UNKNOWN",
-    "period_id": "2027",
     "display_address": "15 Credibility Street, Bristol, BS7 8ES",
     "questionnaire_id": "1234567890",
     "case_type": "HH",

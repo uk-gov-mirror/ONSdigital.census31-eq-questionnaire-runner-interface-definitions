@@ -9,6 +9,7 @@
   "flushed": false,
   "submitted_at": "2026-06-19T14:06:27+00:00",
   "launch_language_code": "en",
+  "period_id": "2027",
   "schema": {
     "survey": "CENSUS",
     "form_type": "H",
@@ -16,7 +17,6 @@
   },
   "survey_metadata": {
     "user_id": "UNKNOWN",
-    "period_id": "2027",
     "display_address": "15 Credibility Street, Bristol, BS7 8ES",
     "questionnaire_id": "1234567890",
     "case_type": "HH",

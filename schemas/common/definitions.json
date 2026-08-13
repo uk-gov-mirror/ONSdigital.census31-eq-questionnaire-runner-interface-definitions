@@ -120,7 +120,7 @@
   },
   "period_id": {
     "$ref": "#/non_empty_string",
-    "description": "A string representing the business area recognised time period for the collection exercise.",
+    "description": "A string representing the recognised time period for the collection exercise.",
     "examples": ["2027", "2031"]
   },
   "period_str": {
