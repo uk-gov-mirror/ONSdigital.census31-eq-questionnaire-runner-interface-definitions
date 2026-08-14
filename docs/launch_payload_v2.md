@@ -1,6 +1,6 @@
-# Respondent Management System to EQ Runner: Payload Version 2
+# Launch Payload (Version 2)
 
-This document defines the JWT payload structure for v2. This often referred to as the launch claims, launch token, or launch JWT.
+This document defines the JWT claims to be used when launching a questionnaire in EQ. The claims are used to authenticate a user, select a questionnaire schema, and pass data used in the questionnaire or to be submitted downstream.
 
 **Prerequisites:**
 
@@ -83,7 +83,7 @@ The data property must adhere to the [Census Survey Metadata][census_survey_meta
 | **questionnaire_id** | The questionnaire id for the case                                                                                                              |    
 
 For a list of required fields please view [survey metadata definition schema](../schemas/common/survey_metadata.json#L53).
-An example of a valid schema can be found in [launch_jwt_census](../examples/rm_to_eq_runner/payload_v2/launch_jwt_census.json)
+An example of a valid schema can be found in [launch_jwt_v2](../examples/launch/payload_v2/launch_jwt_v2.json)
 
 ## An example JSON claim for a Census survey
 
@@ -121,7 +121,7 @@ An example of a valid schema can be found in [launch_jwt_census](../examples/rm_
 
 [jwt_profile]: jwt_profile.md "JWT Profile Definition"
 [census31_schemas_repo]: https://github.com/ONSdigital/census31-eq-questionnaire-schemas/tree/main/schemas/en "Census 2031 Schemas"
-[required_runner_fields]: #required-fields "Required Fields"
+[required_runner_fields]: #mandatory-fields "Required Fields"
 [survey_metadata_fields]: #survey-metadata-fields "Survey Metadata Fields"
 [survey_metadata_data_property]: #data-property "Survey Metadata Data Property Definition"
 [census_survey_metadata]: #census-survey-metadata "Census Survey Metadata"

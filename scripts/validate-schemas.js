@@ -25,8 +25,8 @@ const baseSchemaToSchemaTypeMapping = {
 };
 
 const schemaTypesToExamplesGlob = {
-  launch_v2: "examples/rm_to_eq_runner/*v2*/**/*.json",
-  submission_v2: "examples/eq_runner_to_downstream/*v2*/**/*.json",
+  launch_v2: "examples/launch/*v2*/*.json",
+  submission_v2: "examples/submission/*v2*/*.json",
 };
 
 const loadCommonSchemas = () => {
