@@ -1,6 +1,13 @@
-# EQ Runner to Downstream: Payload Version 2
+# Submission Payload (Version 2)
 
-This document defines the downstream payload structure for version v2.
+The payload `version` is currently fixed to `v2`. This is not to be confused with `data_version` which determines the structure of the `data` property within the payload.
+
+Low-level data types:
+
+- All datetimes are expressed using ISO_8601 and are assumed to be normalised to UTC unless a timezone identifier is given.
+- All character encoding is UTF-8.
+- All boolean responses are matched to a "True" or "False" string representation.
+- Unanswered optional questions are not included in submitted responses (i.e. null or empty strings values are NOT included)
 
 ## Schema Definition
 
@@ -91,9 +98,8 @@ EQ Runner will pass the following keys if a value for them exists.
 
 ```
 
-For additional `data` version examples, see [EQ Runner Data Versions][eq_runner_data_versions]
+For additional `data` version examples, see [Submission Data](submission_data.md)
 
-[eq_runner_data_versions]: eq_runner_data_versions.md "EQ Runner Data Versions"
 [schemas_repo]: https://github.com/ONSdigital/census31-eq-questionnaire-schemas/tree/main/schemas "Schemas Repo"
-[survey_metadata_data_property]: rm_to_eq_runner_payload_v2.md#data-property "Survey Metadata: Data Property"
+[survey_metadata_data_property]: launch_payload_v2.md#data-property "Survey Metadata: Data Property"
 [submission_survey_metadata]: #submission-survey-metadata "Submission Survey Metadata"
