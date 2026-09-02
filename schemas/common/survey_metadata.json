@@ -24,11 +24,6 @@
       }
     },
     "additionalProperties": false,
-    "required": [
-      "ru_ref",
-      "display_address",
-      "case_type",
-      "questionnaire_id"
-    ]
+    "required": ["ru_ref", "display_address", "case_type", "questionnaire_id"]
   }
 }
