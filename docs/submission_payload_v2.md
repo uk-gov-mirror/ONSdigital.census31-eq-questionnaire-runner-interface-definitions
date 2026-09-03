@@ -41,9 +41,9 @@ Low-level data types:
   "tx_id": "7e916adc-1f36-4f1e-81f9-57a4ab4ad183",
   "collection_exercise_sid": "77d00da0-9245-40a3-9219-a9f860066167",
   "case_id": "f48e8790-f591-4086-9f6d-98c8642d96cb",
-   "channel": "rh",
-    "period_id": "2027",
-    "schema": {
+  "channel": "rh",
+  "period_id": "2027",
+  "schema": {
     "survey": "CENSUS",
     "form_type": "H",
     "region_code": "GB-ENG"
